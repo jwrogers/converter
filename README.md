@@ -1,4 +1,4 @@
-man
+Readme
 ===
 
 NAME
