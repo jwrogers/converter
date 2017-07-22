@@ -1,56 +1,49 @@
 man
 ===
 
-[NAME](#NAME)
-[SYNOPSIS](#SYNOPSIS)
-[DESCRIPTION](#DESCRIPTION)
-[AUTHOR](#AUTHOR)
-[COPYRIGHT](#COPYRIGHT)
-
-------------------------------------------------------------------------
-
-NAME <span id="NAME"></span>
+NAME
 ----------------------------
 
 converter − converting pictures to a maximum largest dimension set by the user
 
-SYNOPSIS <span id="SYNOPSIS"></span>
+SYNOPSIS
 ------------------------------------
 
-converter \[OPTIONS\] PICTURES
+converter \[OPTIONS...\] PICTURES
 
-DESCRIPTION <span id="DESCRIPTION"></span>
+DESCRIPTION
 ------------------------------------------
 
-converter is a script for resizing pictures to a maximum dimension on it’s longest side. **
--c, --convert**
+converter is a script for resizing pictures to a maximum dimension on it’s longest side.
 
-required flag for conversion.
+**-c, --convert**
+
+  required flag for conversion.
 
 **-t, --target**
 
-target size for the largest dimension
-Default = 1000
+  target size for the largest dimension
+  Default = 1000
 
 **-d, --dest**
 
-destination of the output images
-Default = ./scaled
+  destination of the output images
+  Default = ./scaled
 
 **-h, --help**
 
-display this text and exit
+  display this text and exit
 
 **-v, --version**
 
-output version information and exit
+  output version information and exit
 
-AUTHOR <span id="AUTHOR"></span>
+AUTHOR
 --------------------------------
 
 John W Rogers (j.w.rogers@umail.ucc.ie)
 
-COPYRIGHT <span id="COPYRIGHT"></span>
+COPYRIGHT
 --------------------------------------
 
 Copyright © 2017 John W Rogers
