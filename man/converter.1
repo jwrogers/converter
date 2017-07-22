@@ -1,0 +1,35 @@
+\" Manpage for converter.
+.\" Contact j.w.rogers@umail.ucc.ie to correct errors or typos.
+.TH man 1 "22 July 2017" "1.0" "User Commands"
+.SH NAME
+converter \- converting pictures to a maximum largest dimension set by the user
+.SH SYNOPSIS
+converter [OPTIONS] PICTURES
+.SH DESCRIPTION
+converter is a script for resizing pictures to a maximum dimension on it's longest side.
+
+.TP
+.B -c,  --convert
+    required flag for conversion.
+.TP
+.B -t,  --target
+    target size for the largest dimension
+    Default = 1000
+.TP
+.B -d,  --dest
+    destination of the output images
+    Default = ./scaled
+.TP
+.B -h,  --help
+    display this text and exit
+.TP
+.B -v,  --version
+    output version information and exit
+.SH AUTHOR
+John W Rogers (j.w.rogers@umail.ucc.ie)
+.SH COPYRIGHT
+.TP
+Copyright © 2017 John W Rogers
+.TP
+License RBSD: The revised (3-clause) BSD, compatible with the GNU GPL,
+       http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5.
