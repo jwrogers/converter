@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+######################################################################
+# Script for installing converter and man page locally in $HOME/.bin #
+######################################################################
+
 # Currently a local install
 
 # Variables
