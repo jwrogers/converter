@@ -1,54 +1,23 @@
-Readme
-===
+# Converter
+====
 
-NAME
-----------------------------
+## Description
+----
+Converter is a simple Bash script that resizes pictures to have their largest dimension close to the target value inputted. This target defaults to 1000.
 
-converter − converting pictures to a maximum largest dimension set by the user
+## Usage
+----
+Users can specify the target dimension and the destination folder or leave it as the defaults.
 
-SYNOPSIS
-------------------------------------
+The **-c, --convert** flag is required to tell the script to convert or resize the pictures.
 
-converter \[OPTIONS...\] PICTURES
+## Install
+----
+Requirements
+-----
+ImageMagick: [www.imagemagick.org](https://www.imagemagick.org/script/index.php)
 
-DESCRIPTION
-------------------------------------------
+To install locally in $HOME/.bin run installer.sh.
+This will also install the man page in /usr/local/man/man1 if it exits.
 
-converter is a script for resizing pictures to a maximum dimension on it’s longest side.
-
-**-c, --convert**
-
-  required flag for conversion.
-
-**-t, --target**
-
-  target size for the largest dimension
-  Default = 1000
-
-**-d, --dest**
-
-  destination of the output images
-  Default = ./scaled
-
-**-h, --help**
-
-  display this text and exit
-
-**-v, --version**
-
-  output version information and exit
-
-AUTHOR
---------------------------------
-
-John W Rogers (j.w.rogers@umail.ucc.ie)
-
-COPYRIGHT
---------------------------------------
-
-Copyright © 2017 John W Rogers
-License RBSD: The revised (3-clause) BSD, compatible with the GNU GPL,
-
-http://www.xfree86.org/3.3.6/COPYRIGHT2.html\#5.
-
-------------------------------------------------------------------------
+Alternatively manually install converter to a location on your PATH.
