@@ -6,6 +6,8 @@
 #  with the largest dimension within a certain range    #
 #                                                       #
 #########################################################
+# Version 0.2 Nov 2017					#
+#########################################################
 
 # Include options parsing
 . $HOME/.bin/options.bash
@@ -15,9 +17,10 @@
 addOption -t --target help="Target size for the largest dimension. Default = 1000" default="1000" dest=targetSize
 addOption -d --dest help="Destination of the output images. Default = ./scaled" default="./scaled" dest=destFile
 addOption -c --convert help="Convert pictures. Required flag for conversion." flagTrue
-addOption -m --move dontShow help="Move converted images to select folders for webifying" flagTrue
+addOption -m --move  help="Move converted images to select folders for webifying" flagTrue
 addOption --file-create dontShow help="Create folders for webifying"
 addOption -v --version help="Show version information" flagTrue
+addOption -s --scale dontShow help="Manually set starting scale to speed up conversion" default="20" dest=scale
 
 setUsage "Converter Script for converting pictures to a maximum largest dimension set by the user.
 Copyright: Copyright (C) 2017 John W Rogers
@@ -83,7 +86,6 @@ converter() {
 	# Variables
 	local img=$1
 	local iter=0
-	local scale=20
 	local iNum=${img//[^0-9]/}
 	local tmp=".tmp-"$iNum".jpg"
 	local outPrefix="$destFile/sc-"
@@ -125,6 +127,8 @@ converter() {
 			fi
 			echo $scale
 			convert $img -scale $scale% $tmp
+			
+			(( iter++ ))
 		done
 
 		echo "image $img converted">&2
@@ -152,17 +156,25 @@ copy_images() {
 		fi
 	done
 
-	echo "copying images">&2
+	echo "copying image: $img">&2
 
 
 	# copy images into folders
 	for dir in "${dirArray[@]}";do
-		echo $dir ^^ $img
+		#echo $dir ^^ $img
 		cp $img $dir/$img
 	done
 
 }
 
+#################
+# Webify Images #
+#################
+webifyIMG(){
+	local img=$1
+	
+
+}
 
 #################
 # Main Function #
@@ -179,7 +191,7 @@ then
 		copy_images $im
 	done;
 elif $version; then
-	echo "Convert Script Version: 0.1 July 2017"
+	echo "Converter Script Version: 0.2 Nov 2017"
 else
 	echo "ERROR: Must specify convert or move";
 fi
