@@ -2,4 +2,5 @@ language: bash
 
 script:
   - mkdir $HOME/.bin
+  - export PATH=$HOME/.bin:$PATH
   - bash installer.sh
